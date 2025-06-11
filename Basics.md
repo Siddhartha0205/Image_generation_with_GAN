@@ -1,4 +1,4 @@
-# Synthetic Image Generation With GANs
+# Synthetic Image Generation With GANs - Basics and Background
 
 <h2>Artificial Intelligence</h2>
 
@@ -56,10 +56,21 @@
 
 <h2>Generative Adversarial Networks (GANs)</h2>
 
+<p>A GAN is a prominent machine learning framework for approaching Generative AI. The concept was developed by Ian Goodfellow and his colleagues in 2014. It consists of 2 neural networks and work based on zero-sum game. The working methodology of GAN can be imagined analogous to a scenario where police catching a fraudster for faking something. </p>
+
+<p>As mentioned above, a GAN consists of two networks: Generator and Discriminator. The generator network creates synthetic data from input signal i.e. noise. The discriminator is trained to validate real vs fake samples using supervised dataset. The generator learns about the hints used by the discriminator to validate the synthetic data and based on the feedback i.e. loss value, the generator enhances its output. At some point of time, generator gains the ability to create a perfect synthetic output where discriminator misinterprets it as a real sample. </p>
+
+<p>The limitation with initial versions of GAN: data generation by generator part of the GAN is uncontrollable. This feature is regulated with later variants.</p>
+
+<p>A few applications of GAN:
+<ul> <li>Image recovery in medical field</li> <li>Malicious tasks</li> <li>Fashion, Art, and Advertising</li> </ul>
+</p>
+
 <h2>References</h2>
 
 <ol>
   <li>Wikipedia contributors, “Artificial intelligence,” Wikipedia, Jun. 08, 2025. https://en.wikipedia.org/wiki/Artificial_intelligence</li>
   <li>Wikipedia contributors, “Machine learning,” Wikipedia, Jun. 09, 2025. https://en.wikipedia.org/wiki/Machine_learning</li>
   <li>Wikipedia contributors, “Deep learning,” Wikipedia, Jun. 10, 2025. https://en.wikipedia.org/wiki/Deep_learning</li>
+  <li>Wikipedia contributors, “Generative adversarial network,” Wikipedia, Apr. 08, 2025. https://en.wikipedia.org/wiki/Generative_adversarial_network</li>
 </ol>
