@@ -9,6 +9,10 @@
 which makes it possible to analyze images. The generator and the discriminator interact in an adversarial manner with each other. The generator takes random noise as input and is designed with an objective to generate realistic
 images. The discriminator is trained to differentiate the real images in the dataset from the images that are synthesized by the generator.</p>
 
+<p align="center">
+<img src = "https://vitalflux.com/wp-content/uploads/2023/07/GAN-Generator-Discriminator-Training-Process-768x350.png" width = "500"> </img>
+</p>
+
 <h3>Generator</h3>
 
 <p>As mentioned, the generator accepts random noise or data from latent space as input to learns to generate realistic images from the noise. It generally maps the latent space to image space. Its structure composes of a series
@@ -44,10 +48,49 @@ and the fake images are mapped with the value <b>0</b>. As the classification is
 with the help of the discriminator network. The loss function defined for the generator network is binary crossentropy between the probabilities and a vector of ones. The aim is to generate synthetic images in a way that
 the discriminator perceives as a real one.</p>
 
-<p></p>
+<p>Usually, training of components of DC-GAN is exclusive to each other. When the generator undergoes training, the discriminator remains constant. This prevents the discriminator network adapting to generalize synthetic
+images as real ones which ultimately ends up with hindering the generator's progress. </p>
+
+<h2>Implementation </h2>
+
+<ul>
+<li>Dataset used to define the real images: CIFAR10 dataset </li>
+<li>Learning rate: 0.0002 </li>
+<li>Input for the generator network: Random noise with mean value <b>100</b> and variance value <b>1</b> </li>
+</ul>
+
+<h2>Results</h2>
+
+Real image: This picture shows the collage formed from CIFAR10 dataset
+<p float="left">
+  <img src="Results/real_samples.png" width="200" />
+</p>
+
+<l>Epoch 1: A collage of images synthesized by the generator in the first epoch</l>
+<p float="left">
+  <img src="Results/fake_samples_epoch_000.png" width="200" />
+</p>
+
+The subsequent samples show the progress in training and generation of synthetic images
+
+Epoch 5:
+<p float="left">
+  <img src="Results/fake_samples_epoch_004.png" width="200" />
+</p>
+
+Epoch 15:
+<p float="left">
+  <img src="Results/fake_samples_epoch_014.png" width="200" />
+</p>
+
+Epoch 22:
+<p float="left">
+  <img src="Results/fake_samples_epoch_021.png" width="200" />
+</p>
 
 <h2>References</h2>
 
 <ol>
   <li>A. Kumar, “DCGAN Architecture Concepts, Real-world Examples - Analytics Yogi,” Analytics Yogi, Aug. 03, 2023. https://vitalflux.com/dcgan-architecture-concepts-real-world-examples/</li>
+  <li>DC-GAN image: A. Kumar, “Generative Adversarial Network (GAN): Concepts, Examples - Analytics Yogi,” Analytics Yogi, Jul. 23, 2023. https://vitalflux.com/examples-generative-adversarial-network-gan/</li>
 </ol>
